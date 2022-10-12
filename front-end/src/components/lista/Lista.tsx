@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { FormatadorService } from "../../services/FormatadorService";
-import { Professor } from "../../types/professor";
+import { Professor } from "../../@types/professor";
 import { Descricao, Foto, Informacoes, ItemLista, ListaStyled, ListaVazia, Nome, Valor } from "./Lista.style";
 
 interface ListaProps {

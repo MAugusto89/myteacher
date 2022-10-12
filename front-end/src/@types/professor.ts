@@ -3,5 +3,5 @@ export interface Professor{
     nome: string;
     descricao: string;
     valor_hora: number;
-    foto:string;
+    foto: string;
 }

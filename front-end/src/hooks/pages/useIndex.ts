@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ApiService } from "../../services/ApiService";
-import { Professor } from "../../types/professor";
+import { Professor } from "../../@types/professor";
 
 export function useIndex() {
     const [listaProfessores, setListaProfessores] = useState<Professor[]>([]);
@@ -20,12 +20,13 @@ export function useIndex() {
 
     useEffect(() => {
         limparFormulario();
-    }, [professorSelecionado]);
+    }, [professorSelecionado])
 
     function marcarAula(){
         if (professorSelecionado !== null) {
             if (validarDadosAula()) {
-                ApiService.post('/professores/'+professorSelecionado.id+'/aulas',{
+                ApiService.post('/professores/'+professorSelecionado.id+'/aulas',
+                {
                     nome,
                     email
                 }).then(() => {
@@ -41,12 +42,12 @@ export function useIndex() {
     }
 
     function validarDadosAula() {
-        return nome.length>0 && email.length > 0;
+        return nome.length > 0 && email.length > 0;
     }
 
     function limparFormulario(){
-        setNome = ('');
-        setEmail = ('');
+        setNome('');
+        setEmail('');
     }
 
     return {

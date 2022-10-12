@@ -2,7 +2,7 @@ import { Box, Button, Dialog, DialogActions, Grid, Snackbar, TextField } from '@
 import type { NextPage } from 'next'
 import Lista from '../src/components/lista/Lista'
 import { useIndex } from '../src/hooks/pages/useIndex'
-import { Professor } from '../src/types/professor'
+import { Professor } from '../src/@types/professor'
 
 const Home: NextPage = () => {
   const {
